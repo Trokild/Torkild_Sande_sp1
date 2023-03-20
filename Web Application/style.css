@@ -1,0 +1,56 @@
+/* paragraphs */ 
+p{ 
+    font-family: Calibri;
+    color: #212529;
+}
+
+/* navbar */ 
+.navbar{
+    font-family: Consolas;
+}
+
+/* navbar menu Item */ 
+.menu{
+    background-color: #0e8ea8;
+    color: #fff;
+}
+
+/* navbar sub-menu Item */ 
+.menu li{
+    background-color: #83d1e1;
+    color: #212529;
+}
+
+table{
+    border-color: #212529;
+    border-radius: 15px;
+    border-width: thin;
+}
+
+/* table header */ 
+th{
+    font-family: Consolas;
+    background-color: #0e8ea8;
+    color: #fff;
+}
+
+/* table cell */ 
+td{
+    font-family: Calibri;
+    background-color: #83d1e1;
+    color: #212529;
+}
+
+/* button positiv */ 
+.button1{
+    font-family: Consolas;
+    background-color: #198754;
+    color: #fff;
+}
+
+/* button negativ */ 
+.button2{
+    font-family: Consolas;
+    background-color: #dc3545;
+    color: #fff;
+}
