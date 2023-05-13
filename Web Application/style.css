@@ -1,30 +1,81 @@
 /* paragraphs */ 
-p{ 
+p, span
+{ 
     font-family: Calibri;
     color: #212529;
 }
 
 /* navbar */ 
-.navbar{
+.navbar
+{
     font-family: Consolas;
-}
-
-/* navbar menu Item */ 
-.menu{
-    background-color: #0e8ea8;
+    background-color: #0E8EA8;
     color: #fff;
+    height: 40px;
 }
 
-/* navbar sub-menu Item */ 
-.menu li{
+.dropdown
+{
+    padding : 0px 10px;
+}
+
+.navbar-nav
+{
+    text-align: top;
+    height: 40px;
+}
+
+.dropdown-menu > a:hover
+{
+    background-color: #6eb0bd;
+}
+
+/* navbar menu*/ 
+.menu{
+    background-color: #83D1E1;
+    color: #fff;
+    border-radius: 0px;
+    outline: 5px solid #83D1E1;
+    outline-offset: -3px ;
+    animation: growDown 150ms ease-in-out forwards; /* Animation for Dropdownmenu */
+    transform-origin: top center;
+}
+
+/* Animation for Dropdownmenu */
+@keyframes growDown {
+    0% {
+        transform: scaleY(0.1)
+    }
+    80% {
+        transform: scaleY(1.1)
+    }
+    100% {
+        transform: scaleY(1)
+    }
+}
+
+/* navbar lines*/ 
+.menu-li{
     background-color: #83d1e1;
     color: #212529;
+    display: inline-block;
+    
 }
 
 table{
     border-color: #212529;
     border-radius: 15px;
     border-width: thin;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    table-layout: auto;
+}
+
+/* For empty table were buttons are placed */
+.clear
+{
+    background-color: #fff;
 }
 
 /* table header */ 
@@ -39,6 +90,27 @@ td{
     font-family: Calibri;
     background-color: #83d1e1;
     color: #212529;
+    overflow: hidden;
+}
+
+h1
+{
+    margin-bottom: 30px;
+}
+
+.mainHeader
+{
+    margin-top: 20px;
+}
+
+#ClockInnBtn, #AddBtn, #ClearBtn
+{
+    float: right;
+}
+
+#ClockOutBtn
+{
+    float: left;
 }
 
 /* button positiv */ 
@@ -46,6 +118,7 @@ td{
     font-family: Consolas;
     background-color: #198754;
     color: #fff;
+    border-width : 0
 }
 
 /* button negativ */ 
@@ -53,4 +126,55 @@ td{
     font-family: Consolas;
     background-color: #dc3545;
     color: #fff;
+    border-width : 0
+}
+
+.clock {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    font-size: 30px;
+}
+
+/* Car and motorbike selector */
+.checkbox
+{
+    font-size: 5px;
+    color: #fff;
+    width: 30px;
+}
+
+/* Inputfield for 'Return Time'*/
+.numField
+{
+    width: 45px;
+    text-align: center
+}
+
+.scheduleBoard, .DeliveryBoard, .staffBoard
+{
+    text-align: center
+}
+
+.logo
+{
+    top: -10px;
+    left: 10px;
+    width: 15%;
+    position: absolute;
+    z-index: -1;
+}
+
+.btn
+{
+    margin-right: 2%;
+    margin-left: 2%;
+    z-index: auto;
+    transition: all .2s ease; /* Animation for buttons */
+}
+
+/* Animation for buttons */
+.btn:hover
+{
+    transform: scale(1.1);
 }
