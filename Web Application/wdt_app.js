@@ -40,7 +40,7 @@ function FillScheduleTable()
 
 function ClockOut(a)
 {
-    let longout = prompt("Time gone:",);
+    let longout = prompt("Minutes gone:",);
     if(isNaN(longout))
     {
         alert("Invalid");
@@ -234,7 +234,7 @@ function AddValidator(name, sur, phn, adrs, hr, min)
     }
 
     regTim = /^\d{1,}$/;
-    if(!regTim.test(hr) || !regTim.test(min) || hr > 24 || min > 60)
+    if(!regTim.test(hr) || !regTim.test(min) || hr > 23 || min > 59)
     {
         alert('Invalid time');
         return false;
@@ -389,7 +389,7 @@ class StaffMember extends Employee
         return {timeOut, timeReturn};
     }
 
-    isLate()
+    staffMemberisLate()
     {
         if(this.status == "Late")
         {
@@ -443,7 +443,7 @@ class DeliveryDriver extends Employee
         this.notifyed = false;
     }
 
-    isLate()
+    deliveryDriverisLate()
     {
         var date = new Date();
         let ret = this.rtnTime.split(":");
@@ -535,7 +535,7 @@ function CheckLateInterval()
 {
     for (let index = 0; index < employees.length; index++) 
     {
-        if(employees[index].isLate())
+        if(employees[index].staffMemberisLate())
         {
             if(employees[index].notifyed == false)
             {
@@ -556,7 +556,7 @@ function CheckLateInterval()
 
     for (let index = 0; index < drivers.length; index++) 
     {
-        if(drivers[index].isLate())
+        if(drivers[index].deliveryDriverisLate())
         {
             if(drivers[index].notifyed == false)
             {
@@ -574,10 +574,6 @@ setInterval(CheckLateInterval, 3000);
 //#region Selector
 $(function()
 {
-    $("#navbar").on("click", (function(){
-
-    }));
-
     $("#ClockOutBtn").on("click", (function(){
         if(selected == true)
         {
@@ -643,13 +639,16 @@ $(function()
             selected = true;
             $(this).children('td').css({'background-color' : "#0e8ea8"});
         }
-        
-
     }).on('mouseup mouseleave', function()
     {
         if(selected == false && $(this).attr("id") != "noSel"){
             $(this).children('td').css("background-color", "#83d1e1");
         }
     });
+
+    $("#dashboard").on("click", (function(){
+        const dhs = document.getElementById("scheduleTable");
+        dhs.scrollIntoView();
+    }));
 });
 //#endregion

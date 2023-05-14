@@ -9,7 +9,7 @@
     <script src="wdt_app.js" defer></script>
 
     <nav class="navbar navbar-expand">
-      <span class="navbar navbar-brand">Dashboard</span>
+      <span class="navbar navbar-brand" id="dashboard">Dashboard</span>
       <button id="navbar" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar navbar-toggler-icon"></span>
       </button>
@@ -39,10 +39,12 @@
       </div>
     </nav>
     <title>Reception Management Dashboard</title>
+
 </head>
 <body>
-<div class="staffBoard">
   <img src="../Images/Company logo.png" class="logo">
+<div class="staffBoard">
+
   <h1 class="mainHeader">Reception Management Dashboard Staff</h1>
   
 <table id="staffTable">
@@ -61,50 +63,50 @@
   <tbody>
     <tr>
       <td></td>
+      <td class="solidTxt"></td>
+      <td class="solidTxt"></td>
       <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td class="solidTxt"></td>
       <td></td>
       <td></td>
       <td></td>
     </tr>
     <tr>
       <td></td>
+      <td class="solidTxt"></td>
+      <td class="solidTxt"></td>
       <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td class="solidTxt"></td>
       <td></td>
       <td></td>
       <td></td>
     </tr>
     <tr>
       <td></td>
+      <td class="solidTxt"></td>
+      <td class="solidTxt"></td>
+      <td></td>
+      <td class="solidTxt"></td>
       <td></td>
       <td></td>
       <td></td>
+    </tr>
+    <tr>
       <td></td>
+      <td class="solidTxt"></td>
+      <td class="solidTxt"></td>
+      <td></td>
+      <td class="solidTxt"></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="solidTxt"></td>
+      <td class="solidTxt"></td>
+      <td></td>
+      <td class="solidTxt"></td>
       <td></td>
       <td></td>
       <td></td>
@@ -130,7 +132,7 @@
   <thead>
     <tr>
       <th scope="col">Vehicle:</th>
-      <th scope="col">Name:</th>
+      <th scope="col"> First Name:</th>
       <th scope="col">Surname:</th>
       <th scope="col">Phone:</th>
       <th scope="col">Address:</th>
@@ -140,7 +142,7 @@
   <tbody id="noSel">
     <tr>
       <td>
-        <input id="vecToggle" type="checkbox" checked data-toggle="toggle" data-on="<i class='bi bi-car-front'></i> Car" data-off="<i class='bi bi-bicycle'></i> Bike" data-width="100" data-offstyle = "success">
+        <input id="vecToggle" type="checkbox" checked data-toggle="toggle" data-on="<i class='bi bi-car-front'></i> Car" data-off="<i class='bi bi-bicycle'></i> Motorbike" data-width="200" data-height="30" data-offstyle = "success">
       </td>
       <td>
         <input type="text" placeholder="First Name" name="name" id="name"/>
@@ -156,7 +158,7 @@
         <input type="text" placeholder="Streetname, 35" name="addrs" id="addrs"/>
       </td>
       <td>
-        <input type="number" name="rtn" id="rtnH" class="numField" min="1" max="24" maxlength="2"
+        <input type="number" name="rtn" id="rtnH" class="numField" min="1" max="23" maxlength="2"
         oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" /> 
         <input type="number" name="rtn" id="rtnM" class="numField" min="1" max="59"  maxlength="2"
         oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"/>
